@@ -11,4 +11,10 @@
 }
 
 */
+@layer components{
+  @font-face {
+    font-family: "Meditative";
+    src: url("/fonts/Meditative.ttf");
+  }
+}
 @import 'actiontext.css';

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsEcom</title>
+    <title> <%= yield(:title) || "RailsEcom"%></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,7 +11,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="bg-gradient-to-r from-indigo-500  via purple-300 to-indigo-200">
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>

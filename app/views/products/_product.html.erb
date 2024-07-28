@@ -1,24 +1,7 @@
+<%=link_to product do %>
 <div id="<%= dom_id product %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= product.name %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
-    <%= product.description %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Image:</strong>
-    <% product.image.each do |image| %>
-      <div><%= link_to image.filename, image %></div>
-    <% end %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Price:</strong>
-    <%= product.price %>
-  </p>
-
+  <%= image_tag product.image.first, class: "h-60 w-full object-cover rounded-lg hover:brightness-75 transition-all duration-250" %>
+  <p class="text-sm text-gray-50"><%= product.name %></p>
+  <p class="text-sm text-gray-200"> <%= number_to_currency product.price %></p>
 </div>
+<% end%>
